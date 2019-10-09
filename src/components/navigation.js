@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 
 class Navigation extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      names : []
+      names: []
     }
   }
-  
+
   render() {
     return (
       <nav className="navigation__list">
-      <a href="#introduction">about</a>
-      <a href="#projects">projects</a>
-      <a>blog</a>
+        <a class="nav-about" href="#introduction">about</a>
+        <a class="nav-projects" href="#projects">projects</a>
+        <a class="nav-blog">blog</a>
       </nav>
     );
   }

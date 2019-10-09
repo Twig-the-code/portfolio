@@ -20,12 +20,28 @@ section {
 }
 .navigation__list {
     display: block;
+    width: 70%;
     text-align: right;
     position: fixed;
-    color: $mainFontColor;
-    text-transform: uppercase;
     z-index: 1000;
 }
+
+.nav-projects, .nav-about, .nav-blog {
+    display: inline-block;
+    transition: 300ms ease;
+    border-bottom: 1px solid transparent;
+    padding: 2em 2em 1em;
+    text-decoration: none;
+    color: $mainFontColor;
+    text-transform: uppercase;
+    font-weight: 100;
+
+    &:hover {
+      border-color: rgba(255,255,255,.85);
+}
+}
+
+
 .main {
     text-align: center;
     grid-area: main;
