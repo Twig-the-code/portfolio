@@ -34,7 +34,7 @@ section {
     text-decoration: none;
     color: $mainFontColor;
     text-transform: uppercase;
-    font-weight: 100;
+    font-weight: 200;
 
     &:hover {
       border-color: rgba(255,255,255,.85);
@@ -69,6 +69,7 @@ section {
     }
 }
 .contactSection {
+    padding: 50px;
     p {
         margin-bottom: 2em;
     }
@@ -80,7 +81,7 @@ section {
 
 .section__title {
     color: $mainFontColor;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 2rem;
     letter-spacing: 0.1em;
 }
@@ -90,14 +91,14 @@ section {
     padding: 15px 25px;
 }
 .helloSection {
-    padding: 300px 0 300px;
+    padding: 100px 0 200px;
 }
 .helloSection, .contactSection {
     a {
         text-decoration: none;
         text-transform: uppercase;
         color: $mainFontColor;
-        font-weight: 100;
+        font-weight: 200;
         letter-spacing: 0.05em;
         &:hover {
             background-color: $mainFontColor;
@@ -111,4 +112,14 @@ section {
     border-top: 1px solid $mainFontColor;
     width: 50px;
     margin: 0 auto;
+}
+
+.footer{
+    padding: 50px;
+}
+
+.fa-facebook-f, .fa-instagram, .fa-linkedin-in, .fa-twitter, .fa-github  {
+    color: $mainFontColor;
+    padding: 10px;
+    font-size: 2em;
 }

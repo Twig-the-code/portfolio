@@ -4,28 +4,28 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators'
 
 class Footer extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      names : []
+      names: []
     }
   }
-  
+
   isLinkDefined = (link, icon) => {
-    if(link != ""){
+    if (link != "") {
       return <a href={link} target="_blank"><i class={icon}></i></a>
     }
   }
 
   render() {
     return (
-      <footer>
-       {this.isLinkDefined(this.props.footer.facebook, "fab fa-facebook-f")}
-       {this.isLinkDefined(this.props.footer.instagram, "fab fa-instagram")}
-       {this.isLinkDefined(this.props.footer.linkedin, "fab fa-linkedin-in")}
-       {this.isLinkDefined(this.props.footer.twitter, "fab fa-twitter")}
-       {this.isLinkDefined(this.props.footer.github, "fab fa-github")}
-       </footer>
+      <footer className="footer">
+        {this.isLinkDefined(this.props.footer.facebook, "fab fa-facebook-f")}
+        {this.isLinkDefined(this.props.footer.instagram, "fab fa-instagram")}
+        {this.isLinkDefined(this.props.footer.linkedin, "fab fa-linkedin-in")}
+        {this.isLinkDefined(this.props.footer.twitter, "fab fa-twitter")}
+        {this.isLinkDefined(this.props.footer.github, "fab fa-github")}
+      </footer>
     );
   }
 }
