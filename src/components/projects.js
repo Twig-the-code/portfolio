@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {bindActionCreators, dispatch} from 'redux';
 import {connect} from 'react-redux';
 import * as actionCreators from '../actions/actionCreators'
+import Project from './Project'
 
 class Projects extends Component {
   
@@ -14,10 +15,7 @@ class Projects extends Component {
         <h2 className="section__title">Projects</h2>
         <div className="underline"></div>
         <div className = "projects">
-          {this.props.projects.map(project => <article className = "projects__article project">
-          <div><h3 className = "project__title">{project.title}</h3></div>
-          <div>{project.description}</div>
-          </article>)}
+          {this.props.projects.map(project => <Project project={project}/>)}
         </div>
       </section>
     );
