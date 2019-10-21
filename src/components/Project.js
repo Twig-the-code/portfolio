@@ -3,7 +3,8 @@ import { bindActionCreators, dispatch } from "redux";
 import { connect } from "react-redux";
 import * as actionCreators from "../actions/actionCreators";
 
-const createTagList = project => <p>jotain </p>;
+const createTag = tag => <p>{tag}</p>
+const createTagList = project => (project.tags || []).map(tag => <p>{tag}</p>);
 
 const Project = props => {
   const project = props.project;

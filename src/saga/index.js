@@ -3,7 +3,8 @@ import { call, put, take, takeLatest, takeEvery, select } from 'redux-saga/effec
 const projects = [
     {
         title: "näyte1",
-        description: "Bear claw powder dragée tootsie roll sweet. Fruitcake topping jelly beans topping jelly. Topping candy canes macaroon. Marzipan powder marshmallow jelly gingerbread soufflé candy canes. Jelly-o brownie ice cream cheesecake. Jelly beans caramels croissant biscuit biscuit candy gummies. Lollipop muffin candy canes. Oat cake donut sugar plum caramels cotton candy cookie wafer donut. Lollipop jelly beans biscuit biscuit candy. Brownie sugar plum chocolate bar pastry powder. Powder jujubes biscuit lollipop tootsie roll candy canes. Biscuit macaroon ice cream. Dragée dessert gummi bears. Soufflé topping cake tiramisu cupcake sweet chupa chups."
+        description: "Bear claw powder dragée tootsie roll sweet. Fruitcake topping jelly beans topping jelly. Topping candy canes macaroon. Marzipan powder marshmallow jelly gingerbread soufflé candy canes. Jelly-o brownie ice cream cheesecake. Jelly beans caramels croissant biscuit biscuit candy gummies. Lollipop muffin candy canes. Oat cake donut sugar plum caramels cotton candy cookie wafer donut. Lollipop jelly beans biscuit biscuit candy. Brownie sugar plum chocolate bar pastry powder. Powder jujubes biscuit lollipop tootsie roll candy canes. Biscuit macaroon ice cream. Dragée dessert gummi bears. Soufflé topping cake tiramisu cupcake sweet chupa chups.",
+        tags: ["eka","toka"]
     },
     {
         title: "näyte2",
