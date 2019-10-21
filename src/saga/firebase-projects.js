@@ -1,4 +1,26 @@
+import {app, db} from "./base"
 export const fetchProjectsFor = async username => {
+    return db.collection("portfolio").doc(username).get().then(
+        resultSet => {
+            console.log({
+                resultSet: resultSet.data()
+            })
+            return resultSet.data()
+        }
+    ).catch(
+        (err) => {
+            console.log({err})
+        }
+    )
+}
+
+
+
+
+
+
+
+export const fetchProjectsFor2 = async username => {
     return [
         {
             title: "näyte1",
