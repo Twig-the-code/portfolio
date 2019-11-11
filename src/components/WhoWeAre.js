@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 
+const rows = twiggers => 
+  twiggers.map (twigger => <a href={`/${twigger.slug}`}>{twigger.name}</a>)
 
-class WhoWeAre extends Component {
+const WhoWeAre = ({twiggers}) => {
  
-    render() {
+    
       return (
       <section>
         <p>
-        Names
+          {rows(twiggers)}
         </p>
       </section>
       );
-    }
   }
   
   export default WhoWeAre;

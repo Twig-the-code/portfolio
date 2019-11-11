@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import {connect} from 'react-redux'
 import Header from "./Header"
 import WhoWeAre from "./WhoWeAre"
 import * as actionCreators from '../actions/actionCreators'
 import { bindActionCreators } from 'redux';
 
-class Index extends Component {
-    componentWillMount(){
-        this.props.getListOfTwiggers()
-    }
- 
-  render() {
-    return (
-       <main className="front-page">
-      <Header/>
-      <WhoWeAre/>
+const Index = ({getListOfTwiggers, twiggers}) => {
+
+
+  const hook = () => {
+    getListOfTwiggers()
+  }
+  useEffect(hook, [])
+  console.log(useEffect)
+
+  return (
+      <main className="front-page">
+        <Header/>
+        <WhoWeAre twiggers={twiggers}/>
       </main>
       
       
     );
-  }
+  
 }
 
 const mapStateToProps = state => ({

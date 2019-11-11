@@ -14,7 +14,20 @@ export const fetchProjectsFor = async username => {
     )
 }
 
-
+export const fetchAllTwiggers = async () => {
+    const fetchTwiggersFromFB = () => db.collection ("portfolio").get().then(
+        resultSet => {
+            console.log({
+                resultSet: resultSet.docs.map(doc => doc.data())
+            })
+            return resultSet.docs.map(doc => doc.data())
+        }).then(
+            documents => documents.map(({ name, slug }) => ({ name, slug }))
+        )
+    const twiggers = await fetchTwiggersFromFB()
+    console.log(twiggers)
+    return twiggers
+}
 
 
 

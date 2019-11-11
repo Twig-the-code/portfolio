@@ -1,5 +1,5 @@
 import { call, put, take, takeLatest, takeEvery, select } from 'redux-saga/effects';
-import {fetchProjectsFor} from './firebase-projects';
+import {fetchProjectsFor, fetchAllTwiggers} from './firebase-projects';
 
 function* fake(action) {
     console.log("HERE data is fetched from DB", { action })
@@ -15,13 +15,8 @@ function* fake(action) {
     yield put({ type: "FAKE_FOOTER", footer })
 }
 
-const twiggers = [{
-    slug: "susanna",
-    name: "Susanna",
-    imageUrl: ""
-}]
-
 function* getListOfTwiggers() {
+    const twiggers = yield call(fetchAllTwiggers)
     // GET DATA FROM DB, then store it
     yield put ({type: "FAKE_TWIGGERS", twiggers})
 }
